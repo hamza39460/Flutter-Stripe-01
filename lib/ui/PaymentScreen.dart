@@ -20,7 +20,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
   @override
   void initState() {
     StripePayment.setOptions(StripeOptions(
-        publishableKey: "pk_test_FzwVJpo0wWxVjOPPMChDkmW900e2NHveZl"));
+        publishableKey: "")); // TODO: Add Publishable Key
     super.initState();
   }
 

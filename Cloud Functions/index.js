@@ -5,7 +5,7 @@ admin.initializeApp(functions.config().firebase);
 const firestore = admin.firestore();
 const settings = { timestampInSnapshots: true };
 firestore.settings(settings)
-const stripe = require('stripe')('sk_test_NkjWqElyi47h9mFflhbYCUj100O3ccrRv3');
+const stripe = require('stripe')('');//TODO: ADD SECRET KEY
 exports.createPaymentIntent = functions.https.onCall((data, context) => {
     return stripe.paymentIntents.create({
     amount: data.amount,
